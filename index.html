@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- Declara o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Elemento raiz da página, com idioma português brasileiro -->
+
+<head> <!-- Seção de cabeçalho com metadados -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para dispositivos móveis -->
+    <link rel="icon" type="image/x-icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+    <title>projeto-netflix</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="style.css?v=2026.03.31"> <!-- Vincula a folha de estilos CSS externa -->
+    <script src="script.js?v=2026.03.31" defer></script> <!-- Vincula o arquivo JavaScript -->
+</head>
+
+<body> <!-- Corpo da página, onde o conteúdo visível é colocado -->
+    <main> <!-- Elemento principal do conteúdo da página -->
+        <button id="theme-toggle" aria-label="Alternar modo escuro/claro">◑</button> <!-- Botão para alternar tema -->
+        <h1>Quem está assistindo?</h1> <!-- Cabeçalho de nível 1 com o título da seção -->
+        <ul class="profiles"> <!-- Lista não ordenada envolvente para perfis -->
+            <li> <!-- Item de agrupamento para a lista ordenada -->
+                <ol class="profile-list" aria-label="Perfis de usuários"> <!-- Lista ordenada dentro da lista não ordenada -->
+                    <li class="profile"> <!-- Item da lista representando um perfil -->
+                        <a href="catalogo/catalogo.html" data-name="Bento" aria-label="Entrar como Bento no catálogo">
+                            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Bento&backgroundColor=b6e3f4"
+                                alt="Avatar do perfil Bento.">
+                            <p>Bento</p>
+                        </a>
+                    </li>
+                    <li class="profile"> <!-- Item da lista para o segundo perfil -->
+                        <a href="catalogo/catalogo.html" data-name="Gilson" aria-label="Entrar como Gilson no catálogo">
+                            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Gilson&backgroundColor=c0f4c0"
+                                alt="Avatar do perfil Gilson.">
+                            <p>Gilson</p>
+                        </a>
+                    </li>
+                    <li class="profile"> <!-- Item da lista para o terceiro perfil -->
+                        <a href="catalogo/catalogo.html" data-name="Clara" aria-label="Entrar como Clara no catálogo">
+                            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Clara&backgroundColor=ffd5b0"
+                                alt="Avatar do perfil Clara.">
+                            <p>Clara</p>
+                        </a>
+                    </li>
+                    <li class="profile"> <!-- Item da lista para o quarto perfil -->
+                        <a href="catalogo/catalogo.html" data-name="Letícia" aria-label="Entrar como Letícia no catálogo">
+                            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Leticia&backgroundColor=f4f0b6"
+                                alt="Avatar do perfil Letícia.">
+                            <p>Letícia</p>
+                        </a>
+                    </li>
+                    <li class="profile add-profile"> <!-- Item da lista para adicionar novo perfil -->
+                        <div class="add-profile-circle" aria-label="Adicionar novo perfil">
+                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="29" fill="none" stroke="rgba(255, 255, 255, 0.5)" stroke-width="2"/>
+                                <line x1="30" y1="15" x2="30" y2="45" stroke="rgba(255, 255, 255, 0.7)" stroke-width="4" stroke-linecap="round"/>
+                                <line x1="15" y1="30" x2="45" y2="30" stroke="rgba(255, 255, 255, 0.7)" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <p>Adicionar perfil</p> <!-- Texto para adicionar um novo perfil -->
+                    </li>
+                </ol>
+            </li>
+        </ul>
+
+        <button class="manage-profiles-btn" type="button">Gerenciar perfis</button>
+
+    </main>
+
+    <script src="js/index.js?v=2026.03.31"></script>
+</body>
+
+</html>

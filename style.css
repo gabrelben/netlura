@@ -1,0 +1,455 @@
+/* Estilos inspirados na Netflix */
+
+body {
+    background: #ffffff;
+    /* Fundo branco para light mode */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Família de fontes sans-serif, priorizando Helvetica Neue */
+    color: #000000;
+    /* Cor do texto preta para light mode */
+    margin: 0;
+    /* Remove margens externas */
+    padding: 0;
+    /* Remove preenchimento interno */
+    min-height: 100vh;
+    /* Altura mínima de 100% da viewport */
+    display: flex;
+    /* Usa flexbox para layout */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+main {
+    text-align: center;
+    /* Alinha o texto ao centro */
+    max-width: 1200px;
+    /* Largura máxima de 1200px */
+    width: 100%;
+    /* Largura de 100% do container */
+    padding: 20px;
+    /* Preenchimento interno de 20px */
+}
+
+h1 {
+    font-size: 3rem;
+    /* Tamanho da fonte de 3rem */
+    font-weight: bold;
+    /* Peso da fonte em negrito */
+    margin-bottom: 2rem;
+    /* Margem inferior de 2rem */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Sombra no texto para light mode */
+}
+
+.profiles {
+    list-style: none;
+    /* Remove marcadores da lista externa */
+    padding: 0;
+    /* Remove padding da lista externa */
+    margin: 0;
+    /* Remove margin da lista externa */
+}
+
+.profile-list {
+    display: flex;
+    /* Usa flexbox para os itens de perfil */
+    flex-wrap: wrap;
+    /* Quebra para a próxima linha quando necessário */
+    justify-content: center;
+    /* Centraliza perfis horizontalmente */
+    gap: 1.5rem;
+    /* Espaçamento entre perfis */
+    list-style: none;
+    /* Remove marcadores da lista ordenada */
+    padding: 0;
+    /* Remove padding interno */
+    margin: 0;
+    /* Remove margens externas */
+}
+
+.profile {
+    display: flex;
+    /* Usa flexbox */
+    flex-direction: column;
+    /* Direção vertical */
+    align-items: center;
+    /* Alinha itens ao centro */
+    cursor: pointer;
+    /* Cursor de ponteiro para indicar clicável */
+    transition: none;
+    /* Remove animações que deslocam itens */
+    padding: 1rem;
+    /* Preenchimento de 1rem */
+    border-radius: 0;
+    /* Perfil quadrado */
+}
+
+.add-profile {
+    margin-top: 1rem;
+}
+
+.profile img {
+    width: 100px;
+    /* Largura de 100px */
+    height: 100px;
+    /* Altura de 100px */
+    border-radius: 0;
+    /* Perfil de imagem quadrado */
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir sem distorcer */
+    margin-bottom: 1rem;
+    /* Margem inferior de 1rem */
+    border: 2px solid transparent;
+    /* Borda invisível sempre presente para evitar salto de layout */
+    box-sizing: border-box;
+}
+
+img:hover {
+    border-color: #000000;
+    /* Mantém o perfil estático enquanto muda apenas a cor da borda */
+}
+
+.profile p {
+    font-size: 1.2rem;
+    /* Tamanho da fonte de 1.2rem */
+    font-weight: 500;
+    /* Peso da fonte médio */
+    margin: 0;
+    /* Remove margens */
+}
+
+.profile a {
+    color: #000000;
+    /* link preto em light mode */
+    text-decoration: none;
+    /* sem sublinhado */
+}
+
+.dark-mode .profile a {
+    color: #ffffff;
+    /* link branco em dark mode */
+    text-decoration: none;
+}
+
+.add-profile-circle {
+    width: 86px;
+    /* Largura do círculo */
+    height: 86px;
+    /* Altura do círculo */
+    display: flex;
+    /* Usa flexbox para centralizar */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin-bottom: 1rem;
+    /* Margem inferior de 1rem */
+    cursor: pointer;
+    /* Cursor de ponteiro para indicar clicável */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Transição suave para hover */
+}
+
+.add-profile-circle:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho ao passar o mouse */
+    opacity: 0.8;
+    /* Reduz ligeiramente a opacidade */
+}
+
+.add-profile-circle svg {
+    width: 100%;
+    /* Preenche o container */
+    height: 100%;
+    /* Preenche o container */
+}
+
+.add-profile p {
+    font-size: 1.2rem;
+    /* Tamanho da fonte de 1.2rem */
+    font-weight: 500;
+    /* Peso da fonte médio */
+    margin: 0;
+    margin-top: 0.35rem;
+    /* Remove margens */
+}
+
+.manage-profiles-btn {
+    margin-top: 2rem;
+    background: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 0.45rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    border-radius: 3px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: opacity 0.2s ease;
+}
+
+.manage-profiles-btn:hover {
+    opacity: 0.75;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    main {
+        max-width: 1000px;
+        /* Limita a largura do container em telas menores */
+        padding: 16px;
+        /* Ajusta o espaçamento interno do container */
+    }
+
+    h1 {
+        font-size: 2.75rem;
+        /* Ajusta o tamanho do título para telas maiores mas não imensas */
+    }
+
+    .profile img {
+        width: 90px;
+        /* Reduz largura da imagem de perfil para tablets grandes */
+        height: 90px;
+        /* Reduz altura da imagem de perfil para tablets grandes */
+    }
+
+    .add-profile-circle {
+        width: 80px;
+        /* Reduz largura do círculo para tablets grandes */
+        height: 80px;
+        /* Reduz altura do círculo para tablets grandes */
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        max-width: 860px;
+        /* Limita a largura do container para tablets em paisagem */
+    }
+
+    .profile-list {
+        display: grid;
+        /* Usa grid para layout 2x2 em tablets */
+        grid-template-columns: repeat(2, 1fr);
+        /* Duas colunas de largura igual */
+        gap: 1rem;
+        /* Espaçamento ajustado para caber sem zoom */
+        justify-items: center;
+        /* Centraliza itens no grid */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: center;
+        /* Centraliza verticalmente o conteúdo */
+        padding-top: 30px;
+        /* Espaço superior ajustado para não ficar muito baixo */
+    }
+
+    main {
+        padding: 10px;
+        /* Padding reduzido para melhor aproveitamento em telas menores */
+    }
+
+    h1 {
+        font-size: 2.1rem;
+        /* Reduz o título para melhor leitura no tablet/mobile */
+        margin-bottom: 1.5rem;
+        /* Reduz margem inferior para caber mais conteúdo */
+    }
+
+    .profile-list {
+        display: grid;
+        /* Muda para grid para layout 2x2 */
+        grid-template-columns: repeat(2, 1fr);
+        /* Duas colunas de largura igual */
+        gap: 0.8rem;
+        /* Espaçamento ajustado para caber sem zoom */
+        justify-items: center;
+        /* Centraliza itens no grid */
+    }
+
+    .profile.add-profile {
+        grid-column: 1 / -1;
+        /* Garante que "Adicionar perfil" fique sozinho na linha */
+        justify-self: center;
+        /* Centraliza o bloco no espaço disponível */
+        transform: translateX(-8%);
+        /* Desloca levemente para a esquerda para o alinhamento visual desejado */
+        width: auto;
+        max-width: none;
+        margin-top: 0.5rem;
+    }
+
+    .profile img {
+        width: 84px;
+        /* Largura menor da imagem em telas pequenas */
+        height: 84px;
+        /* Altura menor da imagem em telas pequenas */
+    }
+
+    .add-profile-circle {
+        width: 76px;
+        /* Largura menor do círculo em telas pequenas */
+        height: 76px;
+        /* Altura menor do círculo em telas pequenas */
+    }
+
+    .profile p {
+        font-size: 1.1rem;
+        /* Reduz leve o texto do perfil em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        align-items: center;
+        /* Centraliza verticalmente o conteúdo */
+        padding-top: 50px;
+        /* Espaço superior reduzido para não ficar excessivamente baixo */
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        /* Tamanho do título adaptado para smartphones */
+        margin-bottom: 0.5rem;
+        /* Margem reduzida para economizar espaço */
+    }
+
+    .profile-list {
+        display: grid;
+        /* Mantém grid para layout 2x2 em smartphones */
+        grid-template-columns: repeat(2, 1fr);
+        /* Duas colunas de largura igual */
+        gap: 0.5rem;
+        /* Espaçamento reduzido para caber sem zoom */
+        justify-items: center;
+        /* Centraliza itens no grid */
+    }
+
+    .profile {
+        width: 100%;
+        /* Perfil ocupa toda largura disponível */
+        max-width: 260px;
+        /* Largura máxima controlada para evitar esticar demais */
+        margin: 0 auto;
+        /* Centraliza perfis na tela */
+        padding: 0.5rem;
+        /* Preenchimento interno reduzido para caber sem zoom */
+        background: transparent;
+        /* Remove fundo translúcido */
+        border: none;
+        /* Remove borda translúcida */
+    }
+
+    .profile img {
+        width: 72px;
+        /* Imagem ainda menor em smartphones muito pequenos */
+        height: 72px;
+        /* Altura correspondente para manter proporção */
+    }
+
+    .add-profile-circle {
+        width: 66px;
+        /* Círculo ainda menor em smartphones muito pequenos */
+        height: 66px;
+        /* Altura correspondente para manter proporção */
+    }
+
+    .profile p {
+        font-size: 1rem;
+        /* Texto legível e compacto */
+    }
+}
+
+@media (orientation: landscape) and (max-height: 720px) {
+    body {
+        padding-top: 20px;
+        /* Ajusta padding quando o dispositivo está em paisagem com pouca altura */
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        /* Título levemente menor nessa orientação para caber na altura */
+    }
+}
+
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 3.2rem;
+        /* Aumenta o tamanho do título em telas grandes */
+    }
+
+    .profile img {
+        width: 120px;
+        /* Maior tamanho de imagem em desktop widescreen */
+        height: 120px;
+        /* Mantém aspecto quadrado */
+    }
+
+    .profiles {
+        gap: 2rem;
+        /* Espaçamento mais generoso para displays largos */
+    }
+}
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    /* Fundo mais escuro para dark mode */
+    color: #ffffff;
+    /* Texto branco em dark mode */
+}
+
+.dark-mode h1 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Sombra no texto com deslocamento e opacidade para dark mode */
+}
+
+.dark-mode .profile {
+    background: transparent;
+    /* Remove fundo sutil em dark mode */
+ 
+}
+
+.dark-mode img:hover {
+    border: 2px solid #ffffff;
+    /* Borda branca no hover em dark mode */
+}
+
+.dark-mode .manage-profiles-btn {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* Estilos para o botão de toggle */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: #000000;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode #theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.dark-mode #theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
